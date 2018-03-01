@@ -1,4 +1,4 @@
-# BLEBeacon
+# BLEBeacon Dataset
 The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month. A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment. The focus is on presenting a real-life realization of a location-aware sensing infrastructure, that can provide insights for smart sensing platforms, crowd-based applications, building management, and user-localization frameworks. 
 
 
@@ -12,8 +12,11 @@ The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertiseme
 Users carried off-the-shelf Gimbal Series 10 iBeacons that continuously transmit BLE advertisement packets. The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm. The backbone of the system is a network of Raspberry Pi 3 (RPi), able to collect all generated packets. 
 
 Regarding system operation two approaches were utilized in parallel:
+
+
 ![RSSI](https://github.com/dimisik/BLEBeacon-Dataset/blob/master/images/ARCH.png)
 * RSSI Report: all advertisement packet receptions from beacon devices are directly reported to a server with a message that contains the beacon/user ID, the packet's Received Signal Strength Indicator (RSSI), a reception timestamp, and finally the ID of the RPi that received the advertisement (Fig. 1).
+
 
 ![Check](https://github.com/dimisik/BLEBeacon-Dataset/blob/master/images/check.png)
 * Check-In/Check-Out Report: each RPi scanner continuously manages a list of current occupants/users in its proximity. A check in-timestamp is created during the user's initial entry, and while this beacon is still being detected by the RPi, a last seen-timestamp is updated. When the beacon is no longer detected a Check-In/Check-Out report packet is created and sent to the server containing the beacon/user ID, the check in-timestamp, the last seen-timestamp, and finally the ID of the RPi (Fig. 2). A thirty-second period is used to ensure that the occupant exited the RPi proximity.
@@ -28,6 +31,8 @@ The RSSI Report file contains the following entries:
 * RSSI: the Received Signal Strength Indicator (RSSI) in dB.
 * Timestamp: Date (Month/Day/Year) and Unix time (Hour:Second) of the advertisement packet reception moment from the Rpi.
 * RPi_id: RPi that received the packet.
+
+
 The Check-In/Check-Out Report file contains Entry_id, Beacon_id, and RPi_id as described above with the addition of two entries namely:
 * In_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the moment a user enters the RPi's vicinity and the first advertisement packet is received.
 * Out_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the last advertisement packet received from the same user by the specific RPi.
@@ -35,7 +40,7 @@ The Check-In/Check-Out Report file contains Entry_id, Beacon_id, and RPi_id as d
 
 # Readme
 
-A detailed description of the sensing infrastructure setup, the real-subject trial, and the BLEBeacon dataset can be found in: D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis,  ["BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons"](https://arxiv.org/abs/1802.08782),arXiv preprint arXiv:1802.08782, 2018.
+Further information and a detailed description of the sensing infrastructure setup, the real-subject trial, and the BLEBeacon dataset can be found in: D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis,  ["BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons"](https://arxiv.org/abs/1802.08782), arXiv preprint arXiv:1802.08782, 2018.
 
 
 ### Research Papers
