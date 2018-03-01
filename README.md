@@ -12,9 +12,10 @@ The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertiseme
 Users carried off-the-shelf Gimbal Series 10 iBeacons that continuously transmit BLE advertisement packets. The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm. The backbone of the system is a network of Raspberry Pi 3 (RPi), able to collect all generated packets. 
 
 Regarding system operation two approaches were utilized in parallel:
-![RSSI](https://github.com/dimisik/BLEBeacon-Dataset/blob/master/images/ARCH.pdf)
+![RSSI](https://github.com/dimisik/BLEBeacon-Dataset/blob/master/images/ARCH.png)
 * RSSI Report: all advertisement packet receptions from beacon devices are directly reported to a server with a message that contains the beacon/user ID, the packet's Received Signal Strength Indicator (RSSI), a reception timestamp, and finally the ID of the RPi that received the advertisement (Fig. 1).
-![Check](https://github.com/dimisik/BLEBeacon-Dataset/blob/master/images/check.pdf)
+
+![Check](https://github.com/dimisik/BLEBeacon-Dataset/blob/master/images/check.png)
 * Check-In/Check-Out Report: each RPi scanner continuously manages a list of current occupants/users in its proximity. A check in-timestamp is created during the user's initial entry, and while this beacon is still being detected by the RPi, a last seen-timestamp is updated. When the beacon is no longer detected a Check-In/Check-Out report packet is created and sent to the server containing the beacon/user ID, the check in-timestamp, the last seen-timestamp, and finally the ID of the RPi (Fig. 2). A thirty-second period is used to ensure that the occupant exited the RPi proximity.
 
 
