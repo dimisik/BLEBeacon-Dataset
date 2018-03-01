@@ -8,8 +8,6 @@ The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertiseme
 
 
 
-![IoT-MicroLocation Flow](https://github.com/idarwish1/images/blob/master/projectflowchart.png)
-
 
 Users carried off-the-shelf Gimbal Series 10 iBeacons that continuously transmit BLE advertisement packets. The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm. The backbone of the system is a network of Raspberry Pi 3 (RPi), able to collect all generated packets. 
 
