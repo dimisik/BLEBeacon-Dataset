@@ -48,6 +48,8 @@ Further information and a detailed description of the sensing infrastructure set
 
 Publications related to the BLEBeacon dataset:
 
+* D. Sikeridis, B.P. Rimal, I. Papapanagiotou, and M. Devetsikiotis, 2018. Unsupervised crowd-assisted learning enabling location-aware facilities. IEEE Internet of Things Journal, 5(6), pp.4699-4713. (Available in: https://ieeexplore.ieee.org/document/8305452)
+
 * D. Sikeridis, M. Devetsikiotis, I. Papapanagiotou, ["Occupant Tracking in Smart Facilities: An Experimental Study"](http://ipapapa.github.io/Files/GlobalSIP_2017.pdf), IEEE GlobalSIP Symposium on Signal Processing for Smart Cities & Internet of Things, Nov. 2017, Montreal, Canada
 
 * D. Sikeridis, M. Devetsikiotis, I. Papapanagiotou, ["A Cloud-Assisted Infrastructure for Occupancy Tracking in Smart Facilities"](http://ipapapa.github.io/Files/ICACON_2017.pdf), IBM Cloud Academy Conference (ICA CON) 2017, Wroclaw, Poland
