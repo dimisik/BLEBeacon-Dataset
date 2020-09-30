@@ -4,6 +4,7 @@ The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertiseme
 > Since 2019, the BLEBeacon dataset is part of the Community Resource for Archiving Wireless Data At Dartmouth (CRAWDAD): https://crawdad.org/unm/blebeacon/20190312/
 
 > To cite the dataset: Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.
+
 > [Cite using BibTeX](https://crawdad.org/unm/blebeacon/20190312/)
  
 
